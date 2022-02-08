@@ -1,3 +1,90 @@
 .background {
+    height: 100%;
+    width: 100%;
     background-image: url('../../PokeImagenes/Pokemon.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: fixed;
+}
+
+.button {
+    margin-top: 80px;
+    margin-right: 245px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border-color: blue;
+    background-image: url('../../PokeImagenes/Enter\ Button.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 10px 10px 50px 10px blue /*rgba(255, 0, 0, 0.75), -10px -10px 25px 10px rgba(255, 255, 255)*/;
+}
+
+.button:hover{
+    cursor: pointer;
+    box-shadow: 10px 10px 50px 10px blue /*rgba(255, 0, 0, 0.75), -10px -10px 25px 10px rgba(255, 255, 255)*/;
+}
+
+.container {
+    height: 100px;
+    width: 100%;
+    background-image: linear-gradient(red, black, white);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0px;
+    
+}
+
+.Text {
+    color: white;
+    font-weight: 100;
+    text-shadow: 25px 10px 25px rgba(255, 255, 255, 0.75), 25px -10px 25px rgba(255, 0, 0, 0.75) ;
+}
+
+
+.WhatsApp{
+    cursor: pointer;
+    margin: 25px;
+    border-radius: 50px;
+    border-color: transparent;
+    background-image: url("../../PokeImagenes/icons8-whatsapp.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+
+.Git{
+    margin: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    border-color: black;
+    background-image: url("../../PokeImagenes/icons8-github-50.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+
+.LinkedIn{
+    margin: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+    border-color: transparent;
+    background-image: url("../../PokeImagenes/icons8-linkedin.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
 }
