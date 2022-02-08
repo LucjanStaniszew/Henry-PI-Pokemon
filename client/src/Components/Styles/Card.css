@@ -1,0 +1,8 @@
+.Card {
+    width: 200px;
+    height: 400px;
+    background-image: url('../../PokeImagenes/Card.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
