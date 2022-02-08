@@ -10,7 +10,7 @@ const getApi = async () => {
         const urlPoke = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=40') 
         let pokeData = urlPoke.data.results.map( p => axios.get(p.url))
         
-        let pokeResults = await Promise.all(pokeData).then( poke => {
+        let pokeResults = await axios.all(pokeData).then( poke => {
             poke.map( p => {
                 pokeSaver.push({
                     id: p.data.id,
@@ -97,7 +97,7 @@ const idSearch = async(id) => {
     const api = idSearchApi(id);
     const db = idSearchDB(id);
 
-    const [ apiPoke, dbPoke ] = await Promise.all([api, db])
+    const [ apiPoke, dbPoke ] = await axios.all([api, db])
     return apiPoke || dbPoke;
 };
 
@@ -126,7 +126,7 @@ const nameSearchDB = async (name) => {
     try {
         const poke = await Pokemon.findOne({
             where: {
-                model: Type,
+                model: Pokemon,
                 attributes: [name],
                 through: {
                     attributes: []
@@ -143,7 +143,7 @@ const nameSearch = async (name) => {
     const api = nameSearchApi(name);
     const db = nameSearchDB(name);
 
-    const [ apiPoke, dbPoke ] = await Promise.all([api, db])
+    const [ apiPoke, dbPoke ] = await axios.all([api, db])
     return apiPoke || dbPoke;
 }
 
