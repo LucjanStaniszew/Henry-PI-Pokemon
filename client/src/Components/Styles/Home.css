@@ -5,6 +5,97 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-y: scroll;
     position: fixed;
+    display: flex;
+    flex-direction: column;
 }
+/* ---------------------------------- */
+.sb{
+    background-color: rgba(255, 255, 255, 0.5);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/* ---------------------------------- */
+.Row{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.text{
+    color: red;
+    font-weight: lighter;
+    text-shadow: 2px 2px 2px rgb(25, 25, 25);
+}
+
+.create{
+    background-image: url('../../PokeImagenes/Pikachu\ 2.jpg');
+    background-position: center;
+    background-size: cover;
+    border-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px;
+}
+.create:hover{
+    cursor: pointer
+}
+
+.reload{
+    background-image: url('../../PokeImagenes/SB.png');
+    background-position: center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border-color: black;
+    box-shadow: 1px 1px 1px 1px rgb(25, 25, 25);
+}
+.reload:hover{
+    cursor: pointer;
+}
+
+.filters{
+    font-family: poke;
+    font-size: 15px;
+    color: red;
+    font-weight: bold;
+    background-color: transparent;
+    border-color: black;
+    border-radius: 15px;
+    margin: 10px;
+}
+/* ---------------------------------- */
+.T-P-SB{
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Title {
+    color: blue;
+    text-shadow: 5px 5px 5px yellow;
+}
+/* ---------------------------------- */
+.Cards {
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+/*_____________     div
+|     Title    |        div /   T
+|Cre- Rel- Fil |        div /   F P PC
+|Page   -   SB |        div /   Cards
+|     Cards    |        div /
+|______________|    /div
+*/
