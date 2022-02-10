@@ -1,8 +1,18 @@
 .Card {
-    width: 200px;
-    height: 400px;
+    width: 350px;
+    height: 450px;
     background-image: url('../../PokeImagenes/Card.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    font-weight: lighter;
+    color: blue;
+    text-shadow: 5px 5px 5px yellow;
+    border-color: red;
+    box-shadow: 2px 2px 5px 5px red, -2px -2px 5px 5px red;
+}
+.Card2{
+    width: 350px;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.25);
 }
