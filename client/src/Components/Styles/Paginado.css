@@ -1,0 +1,38 @@
+.paginado {
+    height: 50px;
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.pageNumber {
+    background-image: linear-gradient(red,black,white);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: black;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    font: poke;
+    font-weight: 900;
+    font-size: large;
+    cursor: pointer;
+    color: red;
+    text-shadow: 3px 3px 3px rgb(165, 165, 165);
+    margin-left: 5px;
+    margin-right: 5px;
+    /*text-shadow: 
+  .1vw 0vw .25vw red, .2vw 0vw .25vw red, .4vw 0vw .25vw red, 
+  .1vw 0vw   0vw white, .2vw 0vw   0vw white, .4vw 0vw   0vw white,
+  .1vw 0vw  .1vw white, .2vw 0vw  .1vw white, .4vw 0vw  .1vw white,
+  .1vw 0vw   2vw white, .2vw 0vw   2vw white, .4vw 0vw   2vw white, 
+  .1vw 0vw   1vw black, .2vw 0vw   1vw black, .4vw 0vw   5vw black, 
+  .1vw 0vw   5vw black, .2vw 0vw  20vw black, .4vw 0vw  10vw black,
+  .1vw 0vw  10vw black, .2vw 0vw  30vw black, .4vw 0vw  10vw black;*/
+}
+
+ul {
+    list-style: none;
+}
