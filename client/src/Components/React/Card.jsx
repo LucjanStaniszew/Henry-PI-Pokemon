@@ -1,12 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Styles/Card.css'
 
-export default function Card ({ image, name, type}) {
+export default function Card ({ id, img, name, types}) {
     return (
         <div className='Card'>
-            <h3>{name}</h3>
-            <h5>{type}</h5>
-            <img src={image} alt="PokeImage not found" width="150px" height="250px" />
+            <div className='Card2'>
+                <h2>Pokemon: {name}</h2>
+                <Link to={"/detail/" + id}>
+                    <img src={img} alt="PokeImage not found" width="250px" height="250px" />
+                </Link>
+                <h3>Types: {types.map(pt => "- " + pt.name + " ")}</h3>
+                <br />
+            </div>
         </div>
     )
 }
