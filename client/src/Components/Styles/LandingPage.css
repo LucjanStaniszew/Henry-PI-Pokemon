@@ -10,28 +10,35 @@
 }
 
 .button {
-    margin-top: 5cm;
-    margin-right: 29vmin;
-    height: 100px;
-    width: 100px;
+    font-family: poke;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    margin-top: 20px;
+    height: 50px;
+    width: 50px;
     border-radius: 50px;
-    border-color: blue;
+    border-color: black;
     background-image: url('../../PokeImagenes/Enter\ Button.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 10px 10px 50px 10px blue /*rgba(255, 0, 0, 0.75), -10px -10px 25px 10px rgba(255, 255, 255)*/;
+    box-shadow: 10px 10px 50px 10px blue, -10px -10px 50px 10px blue;
 }
 
 .button:hover{
     cursor: pointer;
-    box-shadow: 10px 10px 50px 10px blue /*rgba(255, 0, 0, 0.75), -10px -10px 25px 10px rgba(255, 255, 255)*/;
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+    transition: all 1s ease;
 }
 
 .container {
     height: 100px;
     width: 100%;
-    background-image: linear-gradient(red, black, white);
+    /*background-image: linear-gradient(red, black, white);*/
+    background-color: rgba(255, 255, 255, 0.25);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,13 +47,13 @@
     justify-content: space-around;
     position: absolute;
     bottom: 0px;
-    
 }
 
 .Text {
-    color: white;
+    color: black;
+    font-size: large;
     font-weight: 100;
-    text-shadow: 25px 10px 25px rgba(255, 255, 255, 0.75), 25px -10px 25px rgba(255, 0, 0, 0.75) ;
+    text-shadow: 25px 10px 25px rgba(255, 255, 255, 0.75), 25px 10px 25px rgba(255, 255, 255, 0.75);
 }
 
 
@@ -62,6 +69,12 @@
     height: 50px;
     width: 50px;
 }
+.WhatsApp:hover{
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+    transition: all 1s ease;
+}
 
 .Git{
     margin: 25px;
@@ -75,6 +88,12 @@
     height: 50px;
     width: 50px;
 }
+.Git:hover{
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+    transition: all 1s ease;
+}
 
 .LinkedIn{
     margin: 25px;
@@ -87,4 +106,10 @@
     background-size: cover;
     height: 50px;
     width: 50px;
+}
+.LinkedIn:hover{
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+    transition: all 1s ease;
 }
