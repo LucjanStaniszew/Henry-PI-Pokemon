@@ -5,14 +5,11 @@ import '../Styles/LandingPage.css';
 export default function LandingPage() {
     return(
         <div className="background">
-            <div>
-            <Link to = "/home">
-                <button className="button"></button>
-            </Link>
-            </div>
             <div className="container">
-                <h4 className="Text">Images taken from wallpaperaccess.com and iconos8.es</h4>
                 <h4 className="Text">Developed by Luciano Staniszewski</h4>
+                <Link to = "/home">
+                    <button className="button"></button>
+                </Link>
                 <div className="right">
                     <a href="https://github.com/LucjanStaniszew">
                             <button className="Git" />
