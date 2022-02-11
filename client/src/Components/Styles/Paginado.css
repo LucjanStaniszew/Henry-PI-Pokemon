@@ -7,10 +7,11 @@
 }
 
 .pageNumber {
-    background-image: linear-gradient(red,black,white);
+    /*background-image: linear-gradient(red,black,white);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
+    background-color: rgba(255, 255, 255, 0.75);
     border-color: black;
     border-radius: 50px;
     height: 40px;
@@ -19,7 +20,6 @@
     font-weight: 900;
     font-size: large;
     cursor: pointer;
-    color: red;
     text-shadow: 3px 3px 3px rgb(165, 165, 165);
     margin-left: 5px;
     margin-right: 5px;
