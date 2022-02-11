@@ -5,14 +5,12 @@ import '../Styles/Card.css'
 export default function Card ({ id, img, name, types}) {
     return (
         <div className='Card'>
-            <div className='Card2'>
-                <h2>Pokemon: {name}</h2>
+                <h4 className='pokemon'>Pokemon: {name}</h4>
                 <Link to={"/detail/" + id}>
-                    <img src={img} alt="PokeImage not found" width="250px" height="250px" />
+                    <img className='pokeImg' src={img} alt="PokeImage not found" width="175px" height="160px" />
                 </Link>
-                <h3>Types: {types.map(pt => "- " + pt.name + " ")}</h3>
+                <h5 className='types'>Types: {types.map(pt => "- " + pt.name + " ")}</h5>
                 <br />
-            </div>
         </div>
     )
 }
