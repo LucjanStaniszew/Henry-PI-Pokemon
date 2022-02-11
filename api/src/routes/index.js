@@ -179,7 +179,8 @@ router.get('/pokemons/:idPokemon', async (req, res) => {
 
 router.post('/pokemons', async (req, res) => {
 
-    let { name, 
+    let {
+        name, 
         hp, 
         attack, 
         defense, 
@@ -202,15 +203,14 @@ router.post('/pokemons', async (req, res) => {
             img
         })
         
-        types.map(async pt =>
-            await Type.findAll({
-                where: {
-                     name: pt
-                    }
-                }).then(pt => newPoke.addType(pt))),
+       let typesDb = await Type.findOne({
+            where: { name: types }
+        })
+        newPoke.addType(typesDb)
         
         res.status(201).json(newPoke)
     } catch (e) {
+        console.log(e)
         res.status(404).send(e)
     }
 })
