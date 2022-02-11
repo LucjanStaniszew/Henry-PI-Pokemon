@@ -191,7 +191,7 @@ router.post('/pokemons', async (req, res) => {
     } = req.body;
 
     try {
-        let newPoke = await Pokemon.findOrCreate({
+        let newPoke = await Pokemon.create({
             name: name.toLowerCase(),
             hp,
             attack,
@@ -211,7 +211,7 @@ router.post('/pokemons', async (req, res) => {
         
         res.status(201).json(newPoke)
     } catch (e) {
-        res.send(e)
+        res.status(404).send(e)
     }
 })
 
