@@ -56,7 +56,12 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER
     },
 
-    db: {
+    img: {
+      type: DataTypes.STRING,
+      defaultValue: "https://c.tenor.com/t0IqDggQVvQAAAAd/pokemon-whos-that-pokemon.gif"
+    },
+
+    createdInDb: {
       type: DataTypes.BOOLEAN,
       defaultValue: true,
       allowNull: false
