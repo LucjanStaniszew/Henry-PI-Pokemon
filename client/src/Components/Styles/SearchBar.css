@@ -1,0 +1,24 @@
+.searchInput{
+    font-family: poke;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-color: black;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.pokeSearch{
+    margin-top: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 40px;
+    border-color: black;
+    box-shadow: 1px 1px 2px 2px black, -2px -2px 2px 2px black;
+    background-image: url("../../PokeImagenes/SB.png");
+    background-position: center;
+    background-size: cover;
+}
+.pokeSearch:hover{
+    cursor: pointer;
+}
