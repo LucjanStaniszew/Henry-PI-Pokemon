@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import { getPokes, getTypes, getOnePoke, filterByType, filterByStrength } from '../../Actions';
+import { getPokes, getTypes, reload, orderByAbc, filterByType, orderByStrength, filterApi } from '../../Actions';
 import {Link} from 'react-router-dom';
 import Card from './Card'
 import Paginado from './Paginado';
 import SearchBar from './SearchBar'
+import loading from "../../PokeImagenes/loading.gif"
 import '../Styles/Home.css'
 
 export default function Home(){
@@ -15,6 +16,7 @@ export default function Home(){
             // Local States \\
     const [current, setCurrent] = useState(1)
     const [pokemonsPage, setPokemonsPage] = useState(12)
+    const [order, setOrder] = useState("")
     const lastPoke = current * pokemonsPage
     const firstPoke = lastPoke - pokemonsPage
     const pokemons = allPokemons.slice(firstPoke, lastPoke)
@@ -31,29 +33,32 @@ export default function Home(){
 
     useEffect ( () => {
         dispatch(getPokes())
-    },[dispatch] )
+    }, [dispatch] )
     
     function handleReload(e){
         e.preventDefault();
-        dispatch(getPokes())
+        dispatch(reload(e))
     }
-    function handleFilterAbc(e){
+    function handleOrderByAbc(e){
         e.preventDefault();
-        dispatch();
+        dispatch(orderByAbc(e.target.value));
+        setCurrent(1);
+        setOrder(`Ordenado ${e.target.value}`)
     }
     function handleFilterType(e){
         e.preventDefault();
         dispatch(filterByType(e.target.value))
     }
 
-    function handleFilterStrength(e){
+    function handleOrderByStrength(e){
         e.preventDefault();
-        dispatch();
+        dispatch(orderByStrength(e.target.value));
+        setCurrent(1);
+        setOrder(`Ordenado ${e.target.value}`)
     }
 
     function handleFilterApi(e){
-        e.preventDefault();
-        dispatch()
+        dispatch(filterApi(e.target.value))
     }
     
 
@@ -61,7 +66,7 @@ export default function Home(){
         <div className='mainContainer'>
 
             <div className='sb'>
-                <SearchBar className="searchBar" />
+                <SearchBar/>
                 <Link to="/home">
                     <h1 className='title'>Pokemon App</h1>
                 </Link>
@@ -79,8 +84,8 @@ export default function Home(){
                 <Paginado className="paginado" pokemonsPage = {pokemonsPage} allPokemons = {allPokemons.length} paginado = {paginado} />
                 <br />
                 <div className='filters'>
-                    <select className='filterAbc'>
-                        <option value="all">Alphabetical Filter...</option>
+                    <select className='filterAbc' onChange={e => handleOrderByAbc(e)}>
+                        <option value="all">Alphabetical Order...</option>
                         <option value="asc">A to Z</option>
                         <option value="desc">Z to A</option>
                     </select>
@@ -94,27 +99,40 @@ export default function Home(){
                         }
                     </select>
                     <br/>
-                    <select className='filterStrength'>
-                        <option value="all">Strength Filter...</option>
+                    <select className='filterStrength' onChange={e => handleOrderByStrength(e)}>
+                        <option value="all">Strength Order...</option>
                         <option value="powerfull">Powerfull</option>
                         <option value="weak">Weak</option>
                     </select>
                     <br/>
-                    <select className='filterApi'>
-                        <option value="all">Existent or Created Filter...</option>
+                    <select className='filterApi' onChange={e => handleFilterApi(e)}>
+                        <option value="pokes">Existent or Created Filter...</option>
                         <option value="api">Existent</option>
-                        <option value="created">Created</option>
+                        <option value="db">Created</option>
                     </select>
                 </div>
             </div>
 
             <div className='cardscards'>
                 { 
+                    pokemons.length > 0 ? pokemons.map( p => {
+                        return(
+                        <Card name={p.name} img={p.img} types={p.types} />
+                    )}) : 
+                    <div>
+                        <p className='loading'>Loading Pokemons...</p>
+                        <img src={loading} alt="loading.gif" width="700px" height="250px" />
+                    </div>
+                    
+                }
+                {/*
+                { 
                     pokemons?.map( p => {
                         return(
                         <Card name={p.name} img={p.img} types={p.types} />
                     )})
                 }
+                */}
             </div>
 
         </div>
