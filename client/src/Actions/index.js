@@ -10,6 +10,13 @@ export function getPokes(){
     }
 }
 
+export function getPoke(payload) {
+            return ({
+                type: "GET_POKE",
+                payload
+            })
+}
+
 export function getTypes(){
     return async (dispatch) => {
         var types = await axios.get('http://localhost:3001/types')
@@ -20,21 +27,18 @@ export function getTypes(){
     }
 }
 
-export function getOnePoke(name) {
-    return async (dispatch) => {
-        var poke = await axios.get('http://localhost:3001/pokemons?name=' + name)
-        return dispatch({
-            type: "GET_ONE_POKE",
-            payload: poke.data
-        })
+export function reload(payload){
+    return {
+        type: 'RELOAD',
+        payload
     }
 }
 
                         // Filters
 
-export function filterByAbc (payload) {
+export function orderByAbc (payload) {
     return {
-        type: "FILTER_BY_ABC",
+        type: "ORDER_BY_ABC",
         payload
     }
 }
@@ -47,16 +51,16 @@ export function filterByType (payload) {
     }
 }
 
-export function filterByStrength (payload) {
+export function orderByStrength (payload) {
     return {
-        type: "FILTER_BY_STRENGTH",
+        type: "ORDER_BY_STRENGTH",
         payload
     }
 }
 
-export function filterByApi (payload) {
+export function filterApi (payload) {
     return {
-        type: "FILTER_BY_API",
+        type: "FILTER_API",
         payload
     }
 }
