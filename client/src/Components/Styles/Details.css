@@ -1,0 +1,54 @@
+.backgroundDetails{
+    background-image: url('../../PokeImagenes/Pokemon\ 2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.noPoke {
+    color: blue;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-left: 38%;
+    width: 22%;
+}
+
+.pokeDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+.leftDetails{
+    color: blue;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.centerDetails{
+    color: blue;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rightDetails{
+    color: blue;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pkimg{
+    -webkit-filter: drop-shadow(15px 30px 1px black);
+}
+
+.pkname{
+    text-shadow: 5px 5px 1px rgb(209, 160, 0), -5px -5px 1px red;
+}
