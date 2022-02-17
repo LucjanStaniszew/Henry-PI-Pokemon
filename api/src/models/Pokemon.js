@@ -4,7 +4,7 @@ const { DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('pokemon', {
-    ID: {
+    id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       allowNull: false,
@@ -58,7 +58,7 @@ module.exports = (sequelize) => {
 
     img: {
       type: DataTypes.STRING,
-      defaultValue: "https://c.tenor.com/t0IqDggQVvQAAAAd/pokemon-whos-that-pokemon.gif"
+      defaultValue: "https://c.tenor.com/1W4gpgv6GU8AAAAd/sus-eyebrow.gif"
     },
 
     createdInDb: {
@@ -67,5 +67,8 @@ module.exports = (sequelize) => {
       allowNull: false
     }
 
+  }, {
+    timestamps: false
   });
+
 };
