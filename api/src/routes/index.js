@@ -74,10 +74,10 @@ const idSearchApi = async(id) => {
             height: details.height,
             weight: details.weight,
             types: details.types.map(pt => pt.type),
-            img: details.img
+            img: details.sprites.other.home.front_default,
         };
     } catch (e) {
-        res.send(e);
+        console.log(e);
     };
 };
 
@@ -173,7 +173,7 @@ router.get('/pokemons/:idPokemon', async (req, res) => {
         }
         res.status(200).json(idDetails);
     } catch (err) {
-        next (err)
+        console.log(err)
     }
 })
 
