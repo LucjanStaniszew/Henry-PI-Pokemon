@@ -1,0 +1,108 @@
+.divForm{
+    height: 46.8vw;
+    width: 100vw;
+    background-image: url("../../PokeImagenes/Pokemon\ 3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title-submit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.createTitle{
+    color: red;
+    font-weight: lighter;
+    justify-content: center;
+    text-shadow: 2px 2px 2px rgb(25, 25, 25);
+    margin-top: 10px;
+}
+
+.errors{
+    color: red;
+}
+
+.titleCreate{
+    background-image: url("../../PokeImagenes/Enter\ Button.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.titleCreate:hover{
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    transition: all 1s;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+.range{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.leftCreate{
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.center{
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rightCreate{
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.deleteType{
+    background-color: white;
+    border-radius: 50px;
+    border-color: transparent;
+    color: red;
+    font-weight: lighter;
+    justify-content: center;
+    text-shadow: 2px 2px 2px rgb(25, 25, 25);
+}
+
+.deleteType:hover{
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-weight: lighter;
+    justify-content: center;
+    text-shadow: 2px 2px 2px rgb(25, 25, 25);
+}
+
+/* ------------------------ */
+
+.textCreate{
+    color: blue;
+    font-weight: lighter;
+    justify-content: center;
+    /*text-shadow: 2px 2px 2px rgb(25, 25, 25);*/
+    margin-top: 10px;
+}
