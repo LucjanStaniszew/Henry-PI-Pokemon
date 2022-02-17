@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { getPokes, getTypes, reload, orderByAbc, filterByType, orderByStrength, filterApi } from '../../Actions';
 import {Link} from 'react-router-dom';
-import Card from './Card'
+import Card from './Card';
+import NavBar from './NavBar';
 import Paginado from './Paginado';
 import SearchBar from './SearchBar'
 import loading from "../../PokeImagenes/loading.gif"
@@ -66,23 +67,17 @@ export default function Home(){
         <div className='mainContainer'>
 
             <div className='sb'>
-                <SearchBar/>
-                <Link to="/home">
-                    <h1 className='title'>Pokemon App</h1>
-                </Link>
-                <h4 className='text'>
+                <NavBar />
+            </div>
+            
+            <div className='left'>
+                <SearchBar className="searchBar"/>
+                <h4 className='text'>Create Pokemon:    
                     <Link to = '/pokemons'>
                         <button className='create' />
                     </Link>
                 </h4>
-                <h4 className='text'>
-                    <button className='reload' onClick={e => {handleReload(e)}}/>
-                </h4>
-            </div>
-
-            <div className='left'>
                 <Paginado className="paginado" pokemonsPage = {pokemonsPage} allPokemons = {allPokemons.length} paginado = {paginado} />
-                <br />
                 <div className='filters'>
                     <select className='filterAbc' onChange={e => handleOrderByAbc(e)}>
                         <option value="all">Alphabetical Order...</option>
@@ -110,6 +105,10 @@ export default function Home(){
                         <option value="api">Existent</option>
                         <option value="db">Created</option>
                     </select>
+                    <br />
+                    <h4 className='text'>Reload Pokemons:    
+                        <button className='reload' onClick={e => {handleReload(e)}}/>
+                    </h4>
                 </div>
             </div>
 
@@ -117,7 +116,7 @@ export default function Home(){
                 { 
                     pokemons.length > 0 ? pokemons.map( p => {
                         return(
-                        <Card name={p.name} img={p.img} types={p.types} />
+                        <Card id={p.id} name={p.name} hp={p.hp} attack={p.attack} defense={p.defense} speed={p.speed} height={p.height} weight={p.weight} img={p.img} types={p.types} />
                     )}) : 
                     <div>
                         <p className='loading'>Loading Pokemons...</p>
