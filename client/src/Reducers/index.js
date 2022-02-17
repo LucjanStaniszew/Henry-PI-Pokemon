@@ -1,5 +1,5 @@
 const initialState = {
-    pokemon: {},
+    pokemon: [],
     pokemons: [], // Este es el arreglo que modifico en los filtros
     pokemonsFiltered: [], // Este es el arreglo que se mantiene sin cambios
     pokemonsTypes: []
@@ -36,6 +36,12 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 pokemonsTypes: action.payload
+            }
+        
+        case 'GET_DETAILS':
+            return {
+                ...state,
+                pokemon: action.payload
             }
 
         case 'RELOAD':
@@ -115,6 +121,11 @@ function rootReducer(state = initialState, action) {
             return{
                 ...state,
                 pokemons: pokes
+            }
+
+        case 'POST_POKE':
+            return {
+                ...state,
             }
         
         
