@@ -43,7 +43,7 @@ export default function Detail() {
                     <div className="rightDetails">
                     <h3>Height: {pokemon.height}</h3>
                     <h3>Weight: {pokemon.weight}</h3>
-                    <h3>Types: {pokemon.types.map(pt => (<li>{pt.name}</li>))}</h3>
+                    <h3>Types: {pokemon.types.map(pt => (<li>{pt.name.toUpperCase()}</li>))}</h3>
                     </div>
                 </div>
                 

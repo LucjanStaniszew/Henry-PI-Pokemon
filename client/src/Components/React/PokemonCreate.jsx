@@ -19,7 +19,7 @@ export default function PokeCreate(){
         speed: 50,
         height: 50,
         weight: 50,
-        type: [],
+        types: [],
         img: ""
     })
 
@@ -39,7 +39,7 @@ export default function PokeCreate(){
             errors.height = "Please insert a valid HEIGHT number from 0 to 100";
         } else if (!input.weight || input.weight > 100 || input.weight < 0 || typeof input.weight !== "number") {
             errors.weight = "Please insert a valid WEIGHT number from 0 to 100";
-        } else if (!input.type) {
+        } else if (!input.types) {
             errors.types = "Select from 1 to 3 types";
         } else if (!input.img || typeof input.img !== "string" ) {
             errors.img = "Invisibility power! Please insert a valid url image";
@@ -66,12 +66,22 @@ export default function PokeCreate(){
     function handleSelect(e){
         setInput({
             ...input,
-            type: [...input.type, e.target.value]
+            types: [...input.types, e.target.value]
         })
     }
 
     function handleSubmit(e){
         console.log(input)
+        if(!input.name){
+            e.preventDefault();
+            return alert("Can't create a Pokemon without a name")
+        } else if (!input.types.length) {
+            e.preventDefault();
+            return alert("Please select at least one pokemon type")
+        } else if (!input.img) {
+            e.preventDefault();
+            return alert("Please send a valid url image")
+        }
         dispatch(postPoke(input))
         alert("Pokemon created succesfully!!")
         setInput({
@@ -82,16 +92,16 @@ export default function PokeCreate(){
             speed: 50,
             height: 50,
             weight: 50,
-            type: [],
+            types: [],
             img: ""
         })
-        navigate('/home')
+        navigate('/')
     }
 
-    function handleDelete(e){
+    let handleDelete  = (type) => {
         setInput({
             ...input,
-            type: input.type.filter( pokeType => pokeType !== e)
+            types: input.types.filter( pt => pt !== type)
         })
     }
 
@@ -201,7 +211,7 @@ export default function PokeCreate(){
                                 <ul>
                                     <li>
                                         {
-                                            input.type.map( pt =>
+                                            input.types.map( pt =>
                                                 <div>
                                                     <h5 className='textCreate'>
                                                         { allTypes?.find( p => p.name === pt)?.name }
