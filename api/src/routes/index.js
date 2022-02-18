@@ -203,7 +203,7 @@ router.post('/pokemons', async (req, res) => {
             img
         })
         
-       let typesDb = await Type.findOne({
+       let typesDb = await Type.findAll({
             where: { name: types }
         })
         newPoke.addType(typesDb)
