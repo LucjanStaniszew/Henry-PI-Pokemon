@@ -8,6 +8,13 @@
   <img height="150" src="./pokemon.png" />
 </p>
 
+## Imagenes del Proyecto Terminado
+
+<img align="center" src="https://user-images.githubusercontent.com/91505393/156222099-f27be4fb-0d2d-4fbb-b8f1-c09e2ff0aa9b.jpg" height="500" width="750" />
+<img align="center" src="https://user-images.githubusercontent.com/91505393/156222106-06d86b91-0719-47c1-a38b-658c869c9209.jpg" height="500" width="750" />
+<img align="center" src="https://user-images.githubusercontent.com/91505393/156222120-d4c18ed5-8861-4df5-8d80-a224b04e79c4.jpg" height="500" width="750" />
+<img align="center" src="https://user-images.githubusercontent.com/91505393/156222129-17562f2f-355e-4d0b-b439-5d57ee6c2793.jpg" height="500" width="750" />
+
 ## Objetivos del Proyecto
 
 - Construir una App utlizando React, Redux, Node y Sequelize.
