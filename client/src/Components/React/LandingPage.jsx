@@ -11,13 +11,13 @@ export default function LandingPage() {
                     <button className="button"></button>
                 </Link>
                 <div className="right">
-                    <a href="https://github.com/LucjanStaniszew">
+                    <a href="https://github.com/LucjanStaniszew" target="_blank">
                             <button className="Git" />
                     </a>
-                    <a href="https://www.linkedin.com/in/luciano-staniszewski-784264222/">
+                    <a href="https://www.linkedin.com/in/luciano-staniszewski-784264222/" target="_blank">
                             <button className="LinkedIn" />
                     </a>
-                    <a href="https://wa.me/5491133518159">
+                    <a href="https://wa.me/5491133518159" target="_blank">
                             <button className="WhatsApp" />
                     </a>
                 </div>

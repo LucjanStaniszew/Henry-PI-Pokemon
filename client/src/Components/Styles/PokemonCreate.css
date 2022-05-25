@@ -1,7 +1,6 @@
 .divForm{
     height: 46.8vw;
     width: 100vw;
-    background-image: url("../../PokeImagenes/Pokemon\ 3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,6 +30,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-color: black;
+    align-items: center;
     height: 50px;
     width: 50px;
     border-radius: 50px;

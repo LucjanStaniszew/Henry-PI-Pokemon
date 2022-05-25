@@ -1,7 +1,6 @@
 .mainContainer{
     height: 100%;
     width: 100%;
-    background-image: url('../../PokeImagenes/Home.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,7 +31,7 @@
     grid-row: 1 / 2;
     margin-top: 0px;
     color: blue;
-    text-shadow: 5px 5px 1px rgb(209, 160, 0), -5px -5px 1px red;
+    text-decoration: none;
 }
 
 .text{
@@ -41,7 +40,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    text-shadow: 2px 2px 2px rgb(25, 25, 25);
 }
 
 /* ---------------------------------- */
@@ -53,7 +51,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .searchBar{
@@ -71,7 +68,6 @@
     width: 50px;
     height: 50px;
     border-radius: 20px;
-    box-shadow: -1px 1px 2px 2px rgb(209, 160, 0), 5px -5px 5px 5px rgb(209, 160, 0);
 }
 .create:hover{
     cursor: pointer
@@ -143,7 +139,6 @@
     height: 50px;
     border-radius: 25px;
     border-color: black;
-    box-shadow: -1px 1px 2px 2px rgb(25, 25, 25), 5px -5px 5px 5px rgb(25, 25, 25);
 }
 .reload:hover{
     cursor: pointer;
@@ -161,7 +156,6 @@
 
 .loading{
     color: blue;
-    text-shadow: 5px 5px 1px rgb(209, 160, 0), -5px -5px 1px red;
     font-size: large;
     background-color: rgba(255, 255, 255, 0.5);
     width: 200px;

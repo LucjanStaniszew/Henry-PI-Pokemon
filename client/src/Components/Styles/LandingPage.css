@@ -23,7 +23,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 10px 10px 50px 10px blue, -10px -10px 50px 10px blue;
 }
 
 .button:hover{
@@ -37,7 +36,6 @@
 .container {
     height: 100px;
     width: 100%;
-    /*background-image: linear-gradient(red, black, white);*/
     background-color: rgba(255, 255, 255, 0.25);
     background-position: center;
     background-repeat: no-repeat;
